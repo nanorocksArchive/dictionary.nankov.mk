@@ -4,9 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home page</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name='description' content='Dictionary for english word. We give for words description. For this app we use an API fot get data for word.' />
+    <meta name='keywords' content='words, english, us, dictionary, description, uk, free, learning, english words, word, keyword' />
+
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon" />
+    <title>Dictionary - English - words description | find any word | en words | word | dictionary</title>
+
+    <!-- Material Design for Bootstrap fonts and icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+
+    <style type="text/css">
+        .error{
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #6b6e72;
+            font-family: ZCOOL KuaiLe, cursive;
+        }
+    </style>
 </head>
 <body>
-    <h1>Site under construction!!!</h1>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="offset-1 col-10">
+                <div class="card mt-5">
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col text-center">
+                                <img src="/img/main-logo.png" alt="Main logo" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col text-center text-uppercase">
+                                <span class="badge badge-light rounded-0">searched words <span class="badge-dark p-1">0</span></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1" class="bmd-label-floating">Write your word</label>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-outline-secondary btn-sm" type="button">Clear</button>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <div class="form-group">
+                                        <label for="exampleTextarea" class="bmd-label-floating">Word description</label>
+                                        <textarea class="form-control" id="exampleTextarea" rows="8" disabled></textarea>
+                                        <small class="text-muted">
+                                            *The words are taken from several dictionaries, in order to obtain relevant words with description.
+                                        </small>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="button" class="btn btn-outline-dark btn-lg rounded-0">Find word </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center pb-4">
+                    <small class="small text-muted">Written and hosted by Andrej Nankov
+                        (<a href="https://github.com/nanorocks">@nanorocks</a>). Copyright © 2019 English Dictionary.
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<script src="/js/main.js"></script>
 </body>
 </html>
