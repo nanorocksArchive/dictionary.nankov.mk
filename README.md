@@ -2,6 +2,10 @@
 
 It is an English dictionary where you can find description for your beloved word. :)
 
+## API endpoints
+- `GET /api/search/@name` - search by full name
+- `GET /api/search/like/@name` - search like keyword'
+
 
 ## Devbox with Docker container
 
