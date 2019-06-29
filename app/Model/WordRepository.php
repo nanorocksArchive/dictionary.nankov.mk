@@ -42,7 +42,7 @@
 		public function searchLikeName($pattern)
 		{
 			$this->setWordKey($pattern);
-			$word = $this->db->query("SELECT WORD_KEY FROM WORD WHERE WORD_KEY LIKE :pattern");
+			$word = $this->db->query("SELECT DISTINCT WORD_KEY FROM WORD WHERE WORD_KEY LIKE :pattern LIMIT 10");
 			$word->execute(array(':pattern' => $this->getWordKey() . "%"));
 			return $word->fetchAll();
 		}

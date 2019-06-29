@@ -14,53 +14,8 @@
 
     <!-- Material Design for Bootstrap fonts and icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
-
     <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
-
-    <style type="text/css">
-
-        .custom-file-control, .form-control, .is-focused .custom-file-control, .is-focused .form-control{
-            background-image: linear-gradient(0deg,#29a7e0 2px,rgba(0,150,136,0) 0),linear-gradient(0deg,rgba(0,0,0,.26) 1px,transparent 0) !important;
-        }
-        .error{
-            height: 100px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #6b6e72;
-            font-family: ZCOOL KuaiLe, cursive;
-        }
-
-        .autocomplete-items {
-            position: absolute;
-            border: 1px solid #d4d4d4;
-            border-bottom: none;
-            border-top: none;
-            z-index: 50;
-            top: 100%;
-            left: 0;
-            right: 0;
-        }
-
-        .autocomplete-items div {
-            padding: 5px;
-            cursor: pointer;
-            background-color: #fff;
-            border-bottom: 1px solid #d4d4d4;
-        }
-
-        .autocomplete-items div:hover {
-            /*when hovering an item:*/
-            background-color: #e9e9e9;
-        }
-
-        .autocomplete-active {
-            /*when navigating through the items using the arrow keys:*/
-            background-color: DodgerBlue !important;
-            color: #ffffff;
-        }
-
-    </style>
+    <link rel="stylesheet" href="/css/style.min.css">
 </head>
 <body>
 <section>
@@ -68,7 +23,6 @@
         <div class="row">
             <div class="offset-1 col-10">
                 <div class="card mt-5">
-
                     <div class="card-body">
                         <div class="row">
                             <div class="col text-center">
@@ -77,22 +31,22 @@
                         </div>
                         <div class="row">
                             <div class="col text-center text-uppercase">
-                                <span class="badge badge-light rounded-0">searched words <span class="badge-dark p-1">0</span></span>
+                                <span class="badge badge-light rounded-0">searched valid words <span class="badge-dark p-1" id="count-valid-word">0</span></span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
                                 <form autocomplete="off">
                                     <div class="form-group">
-                                        <label for="exampleInputEmail1" class="bmd-label-floating">Write your word</label>
+                                        <label for="auto-complete-input" class="bmd-label-floating">Write your word</label>
                                         <div class="input-group mb-3">
                                             <input type="text" class="form-control" aria-label="Keyword" aria-describedby="basic-addon2" id="auto-complete-input">
                                         </div>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="exampleTextarea" class="bmd-label-floating">Word description</label>
-                                        <textarea class="form-control" id="exampleTextarea" rows="8" disabled></textarea>
+                                        <label for="show-description-word" class="bmd-label-floating">Word description</label>
+                                        <textarea class="form-control small" id="show-description-word" rows="8" disabled></textarea>
                                         <small class="text-muted">
                                             *The words are taken from several dictionaries, in order to obtain relevant words with description.
                                         </small>
@@ -100,7 +54,7 @@
                                     <div class="row">
                                         <div class="col-lg-8 offset-lg-2 col-md-6 offset-md-3 col-sm-12 col-12">
                                             <div class="text-center">
-                                                <button type="button" class="btn btn-outline-dark rounded-0 btn-block">get description </button>
+                                                <button type="button" class="btn btn-outline-dark rounded-0 btn-block" id="get-description-btn">get description </button>
                                             </div>
                                         </div>
                                     </div>
@@ -117,9 +71,7 @@
             </div>
         </div>
     </div>
-
 </section>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js"></script>
-<script src="/js/main.js"></script>
+<script src="/js/main.min.js"></script>
 </body>
 </html>
