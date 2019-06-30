@@ -167,7 +167,7 @@ window.onload = function (e) {
         let showDescriptionWord = document.getElementById('show-description-word');
 
         if (getInputData.length <= 0) {
-            showDescriptionWord.textContent = 'Please, write your word !!!';
+            showDescriptionWord.textContent = 'Please enter your word !!!';
             return -1;
         }
         //showDescriptionWord.value = '';
