@@ -10,7 +10,7 @@ It is an English dictionary where you can find description for your beloved word
 
 ### Build the image:
 
-- navigate to root folder `cd avtogume`
+- navigate to root folder `cd english-dictionary`
 
 - `docker build -t english-dictionary:latest -f docker/Dockerfile .`
 
